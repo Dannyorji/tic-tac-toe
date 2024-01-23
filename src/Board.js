@@ -6,6 +6,7 @@ export function Board({ xIsNext, squares, onPlay }) {
     if (squares[i] || calculateWinner(squares)) {
       return;
     }
+
     const nextSquares = squares.slice();
     xIsNext ? (nextSquares[i] = "X") : (nextSquares[i] = "O");
 
